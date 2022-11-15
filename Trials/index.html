@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Learning</title>
+</head>
+<body>
+    <p>One Paragraph</p>
+    <p><a href="#" onclick="alert('Hi'); return false">Click Me</a></p>
+    <p>Third Paragraph</p>
+    <p>
+        <a href="#" onclick="add(); return false">More</a>
+    </p>
+    <ul id="the-list">
+        <li>First Item</li>
+    </ul>
+    <p>
+        <a href="#" onclick="document.getElementById('staff').innerHTML= 'BACK'; return false">BACK</a>
+        <a href="#" onclick="document.getElementById('staff').innerHTML= 'FORTH'; return false">FORTH</a>
+        <p>
+            Hello <b><span id="staff">Staff!</span></b>
+        </p>
+    </p>
+    <script>
+        counter = 1;
+        console.log(document.getElementById('the-list'))
+        function add(){
+            
+            var item = document.createElement('li');
+            item.className = 'list-item';
+            item.innerHTML = "The counter is " + counter;
+            document.getElementById('the-list').appendChild(item);
+            counter++
+        }
+    </script>
+</body>
+</html>
